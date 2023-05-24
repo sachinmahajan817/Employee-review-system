@@ -1,0 +1,41 @@
+<!--Employee View Page-->
+<div class="w-75 min-vh-100 ">
+
+    <h6 class="text-right mr-4 mt-4">Welcome <%=name%><i class="fa-solid fa-user fa-2x mx-2 text-primary"></i>
+            </span><a href='/login' class="text-dark text-decoration-none mx-2">Log out<i
+                    class="ml-2 text-danger fa-solid fa-right-from-bracket fa-2x"></i></a></h6>
+    <h6>My Reviews</h6>
+    <div style="min-height:300px" class=" container ">
+
+        <!--My rEviews-->
+
+        <%if(myReview.length!=0){%>
+            <%myReview && myReview.forEach(e=>{%>
+                <li style="background-color:rgb(215, 242, 242)" class="list-group-item h-25 w-100">
+                    <h6><strong class="ml-1">From:</strong><span class="ml-1 badge badge-success">
+                            <%=e.from%>
+                        </span></h6>
+                    <h6><strong class="ml-1">Review:</strong><span class="ml-3 ">
+                            <%=e.reviews%>
+                        </span></h6>
+                </li>
+                <%})%>
+                    <%}else{%>
+                        <h1 class="text-danger mt-5">NO REVIEWS YET!!!</h1>
+                        <%}%>
+                            <!-- </ul> -->
+    </div>
+    <div class="container min-h-50 w-100 ">
+        <!-- <ul class="list-group w-100"> -->
+        <!--My rEviews-->
+        <h6>Add Reviews</h6>
+        <%toReview!=undefined && toReview!=undefined && toReview.forEach(r=>{%>
+            <a class="text-dark text-decoration-none" href="/review/?email=<%=r.to%>">
+                <li style="background-color:rgb(255, 255, 255)" class="list-group-item d-flex justify-content-between">
+                    <span>To : <%=r.to%> </span><i class="text-danger fa fa-edit"></i>
+                </li>
+            </a>
+            <%})%>
+                <!-- </ul> -->
+    </div>
+</div>

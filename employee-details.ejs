@@ -1,0 +1,27 @@
+<div style="background-color: rgb(215, 237, 244)" class="container  p-3 border-rounded h-50 w-50">
+
+    <h5 class="text-center text-primary">Employee Details</h5>
+    <div class="w-100  mt-5 d-flex justify-content-center">
+        <label class="w-25">Name</label>
+        <p class="w-75 text-right">
+            <%=name%>
+        </p>
+    </div>
+    <div class="w-100  d-flex justify-content-around">
+        <label class="w-25">Email</label>
+        <p class="w-75 text-right">
+            <%=email%>
+        </p>
+    </div>
+    <div class="w-100 d-flex justify-content-around">
+        <label class=" w-25">Reviews</label>
+        <div class="w-75 d-flex flex-column">
+            <%reviews && reviews.forEach(r=>{%>
+                <p class="text-right">
+                    <%=r.reviews%>
+                </p>
+                <%})%>
+        </div>
+    </div>
+
+</div>

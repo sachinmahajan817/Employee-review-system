@@ -1,0 +1,11 @@
+<!--Review-->
+<div class="h-50 w-100 d-flex justify-content-center align-items-center">
+    <form method="post" action="/review/?email=<%=email%>" class="container w-100">
+        <h3>Review</h3>
+        <h6><span class="fa fa-badge">To:</span><span>
+                <%=email%>
+            </span></h6>
+        <textarea name="review" class="review h-25 w-100" placeholder="Add Review here..."></textarea>
+        <button type="submit" class="btn btn-primary btn-lg btn-block mt-2">Add Review</button>
+    </form>
+</div>
